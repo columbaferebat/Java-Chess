@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Chess</servlet-name>
+        <servlet-class>pl.polsl.Golebiowski.Pawel.Servlets.PlayServlet</servlet-class>
+        <!--<init-param>
+            <param-name>DBAdress</param-name>
+            <param-value>jdbc:derby://localhost:1527/chess</param-value>
+        </init-param>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>chess</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>chess</param-value>
+        </init-param>-->
+    </servlet>
+    <servlet>
+        <servlet-name>ErrorServlet</servlet-name>
+        <servlet-class>pl.polsl.Golebiowski.Pawel.Servlets.ErrorServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowLastMoveServlet</servlet-name>
+       <!-- <init-param>
+            <param-name>DBAdress</param-name>
+            <param-value>jdbc:derby://localhost:1527/chess</param-value>
+        </init-param>
+        <init-param>
+            <param-name>user</param-name>
+            <param-value>chess</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>chess</param-value>
+        </init-param>-->
+        <servlet-class>pl.polsl.Golebiowski.Pawel.Servlets.ShowLastMoveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowLastMoveServlet</servlet-name>
+        <url-pattern>/History</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            -1
+        </session-timeout>
+    </session-config>
+</web-app>
